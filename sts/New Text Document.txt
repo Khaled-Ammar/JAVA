@@ -1,0 +1,22 @@
+@Controller   ملف الجافا
+
+
+
+&&--webapp-- اعمل ملف  WEB-INF-----نضع به ملف ال  index.jsp-----&&
+
+
+
+
+نضع هذه الاشياء في ملف الindex 
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- New line below to use the JSP Standard Tag Library -->
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
+
+
+
+
+نضع هذا السطر في ملف application.properties تكون داخل ملف ال resources
+
+spring.mvc.view.prefix=/WEB-INF/
+
