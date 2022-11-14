@@ -3,9 +3,11 @@ package com.khaled.SaveTravels.Service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.khaled.SaveTravels.Repository.TravelsRepository;
 import com.khaled.SaveTravels.model.Travelsmodel;
-
+@Service
 public class TravelsService {
 	private final TravelsRepository travelsrepository;
 	
