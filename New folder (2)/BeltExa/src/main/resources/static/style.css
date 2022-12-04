@@ -1,0 +1,29 @@
+@charset "windows-1256";
+.container {
+    display: flex;
+    justify-content: space-around;
+
+}
+h1 {
+    color: red;
+}
+input {
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+form{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+p{
+    color: black;
+    
+}
+.vertical {
+        border-left: 6px solid rgb(128, 128, 128) ; 
+        height: 100%;
+        position:absolute;
+}
+

@@ -1,0 +1,100 @@
+package com.codingdojo.mvc.beltexam.models;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Locale.Category;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="usertrips")
+
+public class usertrips {
+	// ...
+	
+
+	    @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Long id;
+	    private String titel;
+	    private String CreatName;
+	    
+	    @Column(updatable=false)
+	    private Date createdAt;
+	    private Date updatedAt;
+	    @ManyToMany(fetch = FetchType.LAZY)
+	    @JoinTable(
+	        name = "categories_products", 
+	        joinColumns = @JoinColumn(name = "Team_id"), 
+	        inverseJoinColumns = @JoinColumn(name = "User_id")
+	    )
+	    private List<Team> categories;
+	    
+	    public usertrips() {
+	        
+	    }
+	    // ...
+	    // getters and setters removed for brevity
+	    // ...
+
+		public Long getId() {
+			return id;
+		}
+
+		public void setId(Long id) {
+			this.id = id;
+		}
+
+		public String getTitel() {
+			return titel;
+		}
+
+		public void setTitel(String titel) {
+			this.titel = titel;
+		}
+
+		public String getCreatName() {
+			return CreatName;
+		}
+
+		public void setCreatName(String creatName) {
+			CreatName = creatName;
+		}
+
+		public Date getCreatedAt() {
+			return createdAt;
+		}
+
+		public void setCreatedAt(Date createdAt) {
+			this.createdAt = createdAt;
+		}
+
+		public Date getUpdatedAt() {
+			return updatedAt;
+		}
+
+		public void setUpdatedAt(Date updatedAt) {
+			this.updatedAt = updatedAt;
+		}
+
+		public List<Team> getCategories() {
+			return categories;
+		}
+
+		public void setCategories(List<Team> categories) {
+			this.categories = categories;
+		}
+	}
+
+
+
+
